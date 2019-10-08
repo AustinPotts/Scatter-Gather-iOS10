@@ -29,9 +29,39 @@ class ViewController: UIViewController {
     
     @IBAction func toggleButtonPressed(_ sender: Any) {
         
-        UIView.animate(withDuration: 1) {
-            self.logoImage.alpha = 0
-        }
+        UIView.animateKeyframes(withDuration: 4, delay: 0, options: [], animations: {
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.L.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.A1.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.M.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.B.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.D.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.A2.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.logoImage.alpha = 0
+            })
+
+            
+            
+        }, completion: nil)
         
         
     }
