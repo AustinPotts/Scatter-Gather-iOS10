@@ -22,7 +22,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     
     
+    
+    
+    
+    
+    
     @IBAction func toggleButtonPressed(_ sender: Any) {
+        
+        UIView.animate(withDuration: 1) {
+            self.logoImage.alpha = 0
+        }
+        
+        
     }
     
     var isScattered: Bool?
