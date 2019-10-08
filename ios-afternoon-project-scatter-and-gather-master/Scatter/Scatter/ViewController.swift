@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         UIView.animateKeyframes(withDuration: 4, delay: 0, options: [], animations: {
             
-            //let color = self.randomColor()
+            
             
             // L Label Animations
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
@@ -43,11 +43,18 @@ class ViewController: UIViewController {
                 
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
-                self.L.center = CGPoint(x: 50, y: 200)
+                self.L.center = CGPoint(x: 50, y: 500)
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.L.layer.backgroundColor = self.randomColor()
             })
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.L.transform = CGAffineTransform(scaleX: 2, y: 1)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
+                self.L.transform = CGAffineTransform(translationX: 50, y: -470)
+            })
+         
             
             
             // A1 Label Animations
@@ -55,13 +62,19 @@ class ViewController: UIViewController {
                 self.A1.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
-                self.A1.center = CGPoint(x: 100, y: 20)
+                self.A1.center = CGPoint(x: 100, y: 600)
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.A1.layer.backgroundColor = self.randomColor()
                 
             })
-            
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.A1.transform = CGAffineTransform(scaleX: 3.3, y: 1)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
+                self.A1.transform = CGAffineTransform(translationX: 30, y: -450)
+            })
+
             
             
             
@@ -71,11 +84,18 @@ class ViewController: UIViewController {
                 
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
-                self.M.center = CGPoint(x: 20, y: 150)
+                self.M.center = CGPoint(x: 120, y: 450)
             })
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.M.layer.backgroundColor = self.randomColor()
             })
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.M.transform = CGAffineTransform(scaleX: 2, y: 1)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
+                self.M.transform = CGAffineTransform(translationX: 50, y: -300)
+            })
+
             
             
             
@@ -85,13 +105,19 @@ class ViewController: UIViewController {
                 self.B.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
-                self.B.center = CGPoint(x: 73, y: 109)
+                self.B.center = CGPoint(x: 173, y: 609)
                 
             })
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.B.layer.backgroundColor = self.randomColor()
             })
-            
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.B.transform = CGAffineTransform(scaleX: 4, y: 1)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
+                self.B.transform = CGAffineTransform(translationX: 50, y: -380)
+            })
+
             
             
             //D Label Animations
@@ -100,11 +126,18 @@ class ViewController: UIViewController {
                 
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
-                self.D.center = CGPoint(x: 55, y: 180)
+                self.D.center = CGPoint(x: 155, y: 580)
             })
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.D.layer.backgroundColor = self.randomColor()
             })
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.D.transform = CGAffineTransform(scaleX: 2.8, y: 2)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
+                self.D.transform = CGAffineTransform(translationX: 50, y: -300)
+            })
+
             
             
             //A2 Label Animations
@@ -113,17 +146,28 @@ class ViewController: UIViewController {
                 
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
-                self.A2.center = CGPoint(x: 80, y: 340)
+                self.A2.center = CGPoint(x: 180, y: 440)
             })
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.A2.layer.backgroundColor = self.randomColor()
             })
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.A2.transform = CGAffineTransform(scaleX: 3.5, y: 3)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
+                self.A2.transform = CGAffineTransform(translationX: 50, y: -100)
+            })
+
             
             
             //Logo Animations
-            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.logoImage.alpha = 0
             })
+            UIView.addKeyframe(withRelativeStartTime: 0.85, relativeDuration: 0.25, animations: {
+                self.logoImage.alpha = 1
+            })
+            
 
             
             
