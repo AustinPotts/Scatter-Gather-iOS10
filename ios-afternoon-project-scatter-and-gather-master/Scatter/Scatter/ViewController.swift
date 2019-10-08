@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         UIView.animateKeyframes(withDuration: 4, delay: 0, options: [], animations: {
             
-            let color = self.randomColor()
+            //let color = self.randomColor()
             
             // L Label Animations
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
@@ -44,28 +44,40 @@ class ViewController: UIViewController {
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
                 self.L.center = CGPoint(x: 50, y: 200)
-                self.L.layer.backgroundColor = color
             }
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
+                self.L.layer.backgroundColor = self.randomColor()
+            })
             
             
             // A1 Label Animations
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
                 self.A1.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
-                self.A1.layer.backgroundColor = color
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
                 self.A1.center = CGPoint(x: 100, y: 20)
             }
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
+                self.A1.layer.backgroundColor = self.randomColor()
+                
+            })
+            
+            
             
             
             //M Label Animations
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
                 self.M.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
-                self.M.layer.backgroundColor = color
+                
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.M.center = CGPoint(x: 20, y: 150)
             })
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
+                self.M.layer.backgroundColor = self.randomColor()
+            })
+            
+            
             
             
             //B Label Animations
@@ -74,27 +86,37 @@ class ViewController: UIViewController {
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.B.center = CGPoint(x: 73, y: 109)
-                self.B.layer.backgroundColor = color
+                
             })
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
+                self.B.layer.backgroundColor = self.randomColor()
+            })
+            
             
             
             //D Label Animations
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
                 self.D.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
-                self.D.layer.backgroundColor = color
+                
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.D.center = CGPoint(x: 55, y: 180)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
+                self.D.layer.backgroundColor = self.randomColor()
             })
             
             
             //A2 Label Animations
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
                 self.A2.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
-                self.A2.layer.backgroundColor = color
+                
             }
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
                 self.A2.center = CGPoint(x: 80, y: 340)
+            })
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
+                self.A2.layer.backgroundColor = self.randomColor()
             })
             
             
